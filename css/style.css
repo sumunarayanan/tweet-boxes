@@ -1,0 +1,117 @@
+#twitter-section {
+	min-height: 250px;
+}
+
+.tweets-card {
+	display: flex;
+	position: relative;
+	z-index: 999;
+}
+.tweet-card {
+	background-color: #fff;
+	margin: 10px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+.tweet-header {
+	display: flex;
+}
+.tweet-header img {
+	max-width: 50px;
+	height: auto;
+	border-radius: 50%;
+	border: 1px solid #DFDFDF;
+}
+.tweet-header-content {
+	margin-left: 15px;
+	text-align: left;
+}
+.tweet-header-content p {
+	margin:0;
+	font-family: "MuseoSlab-700" !important;
+	font-weight: 700;
+	/* font-size: 1.1em; */
+	font-size: 17px;
+	line-height: 140%;
+}
+.tweet-header p:not(:first-child){
+	display: inline-block;
+	color: #999999;
+	font-size: 15px;
+	line-height: 140%;
+}
+.tweet-header a{
+	text-decoration: none;
+}
+.tweet-separator .fa-square {
+	font-size: 5px;
+	vertical-align: middle;
+}
+.tweet-header-content .tweet-display-name {
+	color: #2d2d2d;
+}
+
+.tweet-text p {
+	margin-bottom: 50px;
+	font-family: "Inter-400";
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 170%;
+	color: #2d2d2d;
+	text-align: left;
+}
+.tweet-text p a {
+	color: #006838;
+	text-decoration: none;
+}
+.tweet-footer {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.tweet-footer a{
+	color: #5B7083;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Inter-400";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13px;
+}
+.tweet-footer a span{
+	margin-left :10px;
+}
+
+@media only screen and (max-width: 640px) {
+
+	.tweets-card {
+		flex-direction: column;
+	}
+	.tweet-footer {
+		bottom: 25px;
+	}
+	.tweet-card {
+		padding-bottom: 60px;
+	}
+}
+.tweets-card .tweet-card:first-child:after{
+	content: "";
+	position: absolute;
+	left: -85px;
+	top: -85px;
+	width: 200px;
+	height: 200px;
+	background: url(../images/twitter-icon.png);
+	background-size: contain;
+	z-index: -999;
+}
